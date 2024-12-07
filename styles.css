@@ -1,0 +1,208 @@
+/* Ajuste general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo morado que ocupa toda la pantalla */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #661277 !important; /* Color morado */
+    color: #ffffff; /* Texto blanco */
+}
+
+/* Contenedor principal */
+.yape-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo de Yape */
+.yape-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.yape-logo {
+    width: 100px;
+    position: relative;
+    top: -60px; /* Mover el logo hacia arriba */
+}
+
+/* Caja de información del pago */
+.payment-info {
+    background: url('yape2.png') no-repeat center center;
+    background-size: cover;
+    color: #ffffff !important; /* Asegurar color blanco */
+    border-radius: 0px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 160%; /* Aumentar el ancho */
+    max-width: 540px; /* Aumentar el tamaño máximo */
+    height: 400px; /* Aumentar la altura */
+    margin: -20px auto 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(-50px); /* Mantener el desplazamiento */
+}
+
+/* Título dentro de la caja de información */
+.payment-info h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #661277 !important; /* Color morado */
+    margin: 0 0 90px 0;
+}
+
+/* Monto de la transferencia */
+.payment-info .amount {
+    font-size: 60px !important;
+    color: #661277 !important; /* Color morado */
+    position: relative;
+    top: -60px;
+    left: -7px;
+}
+
+/* Moneda (S/) */
+.payment-info .currency {
+    font-size: 22px;
+    color: #888888 !important; /* Color plomo */
+    position: relative;
+    top: -19px;
+    left: 10px;
+}
+
+/* Nombre del comercio */
+.payment-info .business-name {
+    margin-top: -20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000000 !important; /* Asegurar texto blanco */
+}
+
+/* Fecha y hora */
+.payment-info .date-time {
+    margin-top: 7px;
+    font-size: 0.9rem;
+    color: #aaaaaa !important; /* Asegurar color consistente */
+}
+
+/* Botones */
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.buttons button {
+    background-color: rgba(158, 4, 153, 0.45) !important; /* Color morado translúcido */
+    color: #ffffff !important; /* Texto blanco */
+    border: none;
+    border-radius: 9px;
+    padding: 20px 30px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    flex: 1;
+    transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: #ffffff !important;
+    color: #661277 !important; /* Cambiar a morado */
+}
+
+
+/* Para los dispositivos móviles, agregar reglas para mantener los colores */
+@media (max-width: 768px) {
+    body {
+        background-color: #661277; /* Asegura el fondo morado también en móviles */
+        color: #ffffff; /* Asegura el texto blanco */
+    }
+    
+    .payment-info {
+        height: 300px;
+        background-color: #661277; /* Asegura que el fondo dentro de la caja sea consistente */
+        color: #ffffff; /* Asegura el texto blanco dentro de la caja */
+    }
+    .payment-info h2 {
+        color: #661277; /* Color morado en el título */
+    }
+    .payment-info .amount {
+        font-size: 1.8rem;
+        color: #661277; /* Asegura color morado en la cantidad */
+    }
+    .payment-info .currency {
+        color: #888888; /* Color gris para la moneda */
+    }
+    .payment-info .business-name {
+        font-size: 1rem;
+        color: #000000; /* Asegura que el nombre del negocio sea negro */
+    }
+    .payment-info .date-time {
+        font-size: 0.8rem;
+        color: #aaaaaa; /* Asegura color gris claro en la fecha y hora */
+    }
+    .buttons button {
+        background-color: rgba(158, 4, 153, 0.45) !important; /* Color morado translúcido */
+        color: #ffffff; /* Texto blanco en los botones */
+    }
+    .buttons button:hover {
+        background-color: #ffffff !important;
+        color: #661277; /* Cambiar el color de texto a morado al hacer hover */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-color: #661277; /* Asegura que el fondo se mantenga morado */
+        color: #ffffff; /* Asegura el texto blanco */
+    }
+    
+    .payment-info {
+        height: 250px;
+        background-color: #661277; /* Fondo dentro de la caja */
+        color: #ffffff; /* Asegura el texto blanco dentro de la caja */
+    }
+    .payment-info h2 {
+        color: #661277; /* Color morado en el título */
+    }
+    .payment-info .amount {
+        font-size: 1.6rem;
+        color: #661277; /* Asegura color morado en la cantidad */
+    }
+    .payment-info .currency {
+        color: #888888; /* Color gris para la moneda */
+    }
+    .payment-info .business-name {
+        font-size: 1rem;
+        color: #000000; /* Nombre del negocio en color negro */
+    }
+    .payment-info .date-time {
+        font-size: 0.8rem;
+        color: #aaaaaa; /* Color gris claro para la fecha y hora */
+    }
+    .buttons button {
+        background-color: rgba(158, 4, 153, 0.45) !important; /* Color morado translúcido */
+        color: #ffffff; /* Texto blanco en los botones */
+    }
+    .buttons button:hover {
+        background-color: #ffffff !important;
+        color: #661277; /* Cambiar el color de texto a morado al hacer hover */
+    }
+}
